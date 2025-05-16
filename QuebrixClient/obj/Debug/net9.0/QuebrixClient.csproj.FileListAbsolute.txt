@@ -1,0 +1,12 @@
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\bin\Debug\net9.0\QuebrixClient.deps.json
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\bin\Debug\net9.0\QuebrixClient.dll
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\bin\Debug\net9.0\QuebrixClient.pdb
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\QuebrixClient.csproj.AssemblyReference.cache
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\QuebrixClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\QuebrixClient.AssemblyInfoInputs.cache
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\QuebrixClient.AssemblyInfo.cs
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\QuebrixClient.csproj.CoreCompileInputs.cache
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\QuebrixClient.dll
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\refint\QuebrixClient.dll
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\QuebrixClient.pdb
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\ref\QuebrixClient.dll
