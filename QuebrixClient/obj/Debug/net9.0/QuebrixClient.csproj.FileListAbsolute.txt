@@ -10,3 +10,4 @@ D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\QuebrixClient
 D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\refint\QuebrixClient.dll
 D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\QuebrixClient.pdb
 D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\ref\QuebrixClient.dll
+D:\OpenSource\QeubrixApp\quebrix-cs\QuebrixClient\obj\Debug\net9.0\QuebrixClient.sourcelink.json

@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "Example.Controllers.QuebrixExampleController",
+    "Method": "AddUser",
+    "RelativePath": "api/QuebrixExample/AddUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Example.Controllers.QuebrixExampleController",
     "Method": "Authenticate",
     "RelativePath": "api/QuebrixExample/Authenticate/auth",
     "HttpMethod": "POST",
@@ -65,6 +81,16 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Example.Controllers.QuebrixExampleController",
+    "Method": "GetUsers",
+    "RelativePath": "api/QuebrixExample/GetUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Example.Controllers.QuebrixExampleController",

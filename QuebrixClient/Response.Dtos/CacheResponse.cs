@@ -2,6 +2,14 @@
 
 namespace QuebrixClient.Response.Dtos;
 
+public class ValueResult
+{
+    [JsonProperty("value")]
+    public byte[] Value { get; set; }
+    [JsonProperty("value_type")]
+    public string ValueType { get; set; }
+}
+
 public class CacheResponse<T>
 {
     [JsonProperty("is_success")]

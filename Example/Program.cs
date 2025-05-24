@@ -1,3 +1,4 @@
+using Example;
 using QuebrixClient.QuebrixDependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,9 @@ builder.Services.AddQuebrix(op =>
     op.Port = 6022;
     op.UserName = "admin";
     op.Password = "123456";
-}).WithCache();
+}).WithCache()//use cache
+.WithEFSharding<FakeSharder>().ByQuebrixDbContext<FakeAppDbContext>();//use sharding
+
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();

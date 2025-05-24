@@ -135,36 +135,52 @@ public class QuebrixCacheProvider:IQuebrixCacheProvider
 
             if (!response.IsSuccessful)
             {
-                return new CacheResponse<T>
-                {
-                    IsSuccess = false,
-                    Message = response.ErrorMessage ?? "Request failed",
-                    Data = default
-                };
+                return CacheResponse<T>.Failed(response.ErrorMessage ?? "Request failed");
             }
 
-            // Deserialize the raw response first to access the stringified byte[] value
-            var rawResponse = JsonConvert.DeserializeObject<CacheResponse<string>>(response.Content);
+            // اول JSON رو به ApiResponse<ValueResult> دیکد کن
+            var apiResponse = JsonConvert.DeserializeObject<CacheResponse<ValueResult>>(response.Content);
 
-            if (rawResponse == null || !rawResponse.IsSuccess || string.IsNullOrEmpty(rawResponse.Data))
+            if (apiResponse == null || !apiResponse.IsSuccess || apiResponse.Data == null)
             {
-                return new CacheResponse<T>
-                {
-                    IsSuccess = false,
-                    Message = rawResponse?.Message ?? $"Deserialization failed or empty value for type: {nameof(T)}",
-                    Data = default
-                };
+                return CacheResponse<T>.Failed(apiResponse?.Message ?? "Failed to get or deserialize data");
             }
 
-            var finalData = JsonConvert.DeserializeObject<T>(rawResponse.Data);
+            object finalValue;
 
-            return CacheResponse<T>.Ok(finalData);
+            // اگر نوع داده مقصد int هست
+            if (typeof(T) == typeof(int) && apiResponse.Data.ValueType == "Int")
+            {
+                // تبدیل بایت آرایه به int
+                var intValue = BitConverter.ToInt32(apiResponse.Data.Value, 0);
+                finalValue = intValue;
+            }
+            // اگر رشته هست
+            else if (typeof(T) == typeof(string))
+            {
+                var stringValue = Encoding.UTF8.GetString(apiResponse.Data.Value);
+                finalValue = stringValue;
+            }
+            // اگر خود T از نوع بایت آرایه است (byte[])
+            else if (typeof(T) == typeof(byte[]))
+            {
+                finalValue = apiResponse.Data.Value;
+            }
+            else
+            {
+                // اگر نوع دیگه‌ای هست، تلاش می‌کنیم مستقیم دیکد کنیم (مثلا اگر JSON رشته‌سریال شده است)
+                var jsonString = Encoding.UTF8.GetString(apiResponse.Data.Value);
+                finalValue = JsonConvert.DeserializeObject<T>(jsonString);
+            }
+
+            return CacheResponse<T>.Ok((T)finalValue);
         }
         catch (Exception ex)
         {
             return CacheResponse<T>.Failed($"Exception occurred: {ex.Message}");
         }
     }
+
 
 
 

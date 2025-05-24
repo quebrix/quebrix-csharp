@@ -82,3 +82,8 @@ public interface IQuebrixCacheProvider
     Task<CacheResponse<bool>> CopyCluster(string srcCluster, string destCluster);
 }
 
+public interface IQuebrixEFSharder
+{
+   public Task<int> GetShardingKey();
+}
+

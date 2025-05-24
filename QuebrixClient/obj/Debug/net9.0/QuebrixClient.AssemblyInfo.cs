@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuebrixClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac752d292e374d11a4faa16db22c4f0d553f7f2b")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuebrixClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuebrixClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
